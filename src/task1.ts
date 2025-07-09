@@ -14,7 +14,7 @@ import { userInfo } from "os";
 
     type Info={name:string ; age?:number; role:"admin" | "Info" | "guest"}
 
-    name:string;
+    
     const CreatUser=<User>(user:User)=>
     {
         return {...user}
@@ -151,9 +151,18 @@ type Admin={
 
 type AdminUser= UserInfo &  Admin
 
-const admin1 : AdminUser= {
-    
+function describeAdmin(user: AdminUser): string {
+  return `Admin ${user.name} (${user.email}) has admin level ${user.adminLevel}.`;
 }
+
+
+const admin101 : AdminUser= {
+        name:"Miraz",
+        email:"ahmedmiraz87@gmail.com",
+        adminLevel:"3"
+}
+
+console.log(describeAdmin(admin101))
 
 
 
