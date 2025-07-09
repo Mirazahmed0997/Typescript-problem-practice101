@@ -1,3 +1,6 @@
+import { describe } from "node:test";
+import { userInfo } from "os";
+
 // ts-node-dev --respawn src/index.ts
 {
 
@@ -9,8 +12,9 @@
 
     // task 2 function
 
-    type User={name:string ; age?:number; role:"admin" | "user" | "guest"}
+    type Info={name:string ; age?:number; role:"admin" | "Info" | "guest"}
 
+    name:string;
     const CreatUser=<User>(user:User)=>
     {
         return {...user}
@@ -111,8 +115,45 @@ const sum = (...numbers: number[]) => {
 };
 //  return numbers.reduce((total, num) => total + num, 0);
 
+// task 7
+
+ const assertionType= (value: string | number)=>
+ {
+    if(typeof value == "string")
+    {
+        
+        return value.length
+    }
+
+    else if(typeof value =="number")
+    {
+       
+        return value*value;
+    }
+ }
 
 
+ const result1= assertionType(100) 
+ const result2= assertionType("1000")
+
+ console.log(result1) 
+ console.log(result2)
+
+
+type UserInfo={
+    name:string;
+    email:string;
+}
+
+type Admin={
+    adminLevel:string;
+}
+
+type AdminUser= UserInfo &  Admin
+
+const admin1 : AdminUser= {
+    
+}
 
 
 

@@ -41,7 +41,7 @@
         [index : number] : number
     }
 
-    const roolNumber : Roll=[1,2,3,4]
+    const rol23lNumber : Roll=[1,2,3,4]
 
     type Add=(num1 : number,num2: number)=> number;
 
