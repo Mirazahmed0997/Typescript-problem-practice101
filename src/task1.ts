@@ -140,6 +140,10 @@ const sum = (...numbers: number[]) => {
  console.log(result2)
 
 
+
+//  task 8
+
+
 type UserInfo={
     name:string;
     email:string;
@@ -163,6 +167,80 @@ const admin101 : AdminUser= {
 }
 
 console.log(describeAdmin(admin101))
+
+
+
+
+
+
+// task 9
+
+
+
+
+type Employee = {
+  address?: {
+    city?: string;
+  };
+};
+
+function getEmployeeCity(employee: Employee): string | undefined {
+  return employee?.address?.city;
+}
+
+
+const emp1: Employee = {
+  address: {
+    city: "Los Angeles"
+  }
+};
+
+const emp2: Employee = {};
+
+console.log(getEmployeeCity(emp1)); // "Los Angeles"
+console.log(getEmployeeCity(emp2)); // undefined
+
+
+// task 10
+
+const getDisplayName=(name:string| null| undefined)=>
+{
+    if(typeof name=="string")
+    {
+        console.log(name)
+    }
+ 
+    else
+    {
+        console.log("Anonymous")
+    }
+}
+
+
+getDisplayName("Miraz Ahmed")
+getDisplayName(undefined)
+getDisplayName(null)
+
+// task 11
+
+const processData=(data:unknown)=>
+{
+    if(typeof data=="string")
+    {
+      return  data
+    }
+    else if(typeof data=="number")
+    {
+        return data*data
+    }
+}
+
+const data1 =processData("Miraz")
+const data2 =processData(1000)
+
+console.log(data1)
+console.log(data2)
+
 
 
 
