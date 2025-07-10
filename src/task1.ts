@@ -242,6 +242,29 @@ console.log(data1)
 console.log(data2)
 
 
+// task 13
+
+const removeDuplicateArray=<T>(param:T[])=>
+    {
+        let checkedArray: T[] = [];
+       for (let i = 0; i < param.length; i++) 
+        {
+
+        if (!checkedArray.includes(param[i])) 
+
+        {
+            checkedArray.push(param[i]);
+        }
+
+       
+    }
+
+     return checkedArray
+        
+    }
+
+    const array=removeDuplicateArray([11,2,3,4,2,4,5])
+    console.log(array)
 
 
 
