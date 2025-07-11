@@ -266,6 +266,38 @@ const removeDuplicateArray=<T>(param:T[])=>
     const array=removeDuplicateArray([11,2,3,4,2,4,5])
     console.log(array)
 
+    // task 14
+
+    const userDetails=[
+    {
+        name:"miraz",age:28
+    },
+    {
+        name:"ahmed",age:30
+    }
+]
+
+const singleDetails= userDetails.map((detail)=>{
+   console.log(`name: ${detail.name} age:${detail.age}`)
+})
+
+// task 15
+
+const isString=(value:unknown)=>
+{
+    if(typeof value=="string")
+    {
+        return value.toUpperCase()
+    }
+}
+
+
+const upperCase=isString("isty")
+console.log(upperCase)
+
+
+
+
 
 
 }
