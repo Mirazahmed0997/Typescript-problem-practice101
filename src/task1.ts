@@ -298,9 +298,9 @@ console.log(upperCase)
 
 // task 16
 
-// function getPropertyValue<T, K extends keyof T>(obj: T, key: K): T[K] {
-//   return obj[key];
-// }
+function getPropertyBykey<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
 const user = {
   name: "Alice",
   age: 25,
@@ -311,10 +311,10 @@ const user = {
 
 
 
-const  getPropertyBykey = <T ,K extends keyof T>(obj: T, key:K):T[K]=>
-{
-    return obj[key];
-}
+// const  getPropertyBykey = <T ,K extends keyof T>(obj: T, key:K):T[K]=>
+// {
+//     return obj[key];
+// }
 
 const name = getPropertyBykey(user, "name"); // Type: string
 const age = getPropertyBykey(user, "age");   // Type: number
