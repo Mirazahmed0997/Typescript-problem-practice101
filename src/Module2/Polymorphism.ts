@@ -33,7 +33,7 @@ const developer= new Developer();
 getWorkingHour(student)
 getWorkingHour(developer)
 
-// if a perticular method of a class is behave differently in another class is called polymorphism , 
+// if a perticular method of a class is behave differently in another class is called polymorphism , 556
 // we can see above,  parents classes method returns different output in different class .
 
 
