@@ -19,13 +19,22 @@ class Developer extends Person{
     }
 }
 
-
+const getWorkingHour=(param:Person)=>
+{
+    param.workingHour()
+}
 
 const student=new Student();
-student.workingHour()
+// student.workingHour()
 
 const developer= new Developer();
-developer.workingHour()
+// developer.workingHour()
+
+getWorkingHour(student)
+getWorkingHour(developer)
+
+// if a perticular method of a class is behave differently in another class is called polymorphism , 
+// we can see above,  parents classes method returns different output in different class .
 
 
 
