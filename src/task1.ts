@@ -298,6 +298,7 @@ console.log(upperCase)
 
 // task 16
 
+<<<<<<< HEAD
 function getPropertyBykey<T, K extends keyof T>(obj: T, key: K,attr: string): T[K] |undefined{
 
     if(typeof key==="string" && key.includes(attr))
@@ -307,6 +308,10 @@ function getPropertyBykey<T, K extends keyof T>(obj: T, key: K,attr: string): T[
 
 
   return undefined;
+=======
+function getPropertyBykey<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+>>>>>>> fb0574a870f1b64d88a6d9a5fe990f9bb5ef893a
 }
 const user = {
   name: "Alice",
@@ -323,8 +328,13 @@ const user = {
 //     return obj[key];
 // }
 
+<<<<<<< HEAD
 const name = getPropertyBykey(user, "name","name"); // Type: string
 const age = getPropertyBykey(user, "age","id");   // Type: number
+=======
+const name = getPropertyBykey(user, "name"); // Type: string
+const age = getPropertyBykey(user, "age");   // Type: number
+>>>>>>> fb0574a870f1b64d88a6d9a5fe990f9bb5ef893a
 
 console.log(name, age)
 
