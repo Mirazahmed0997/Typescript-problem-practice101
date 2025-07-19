@@ -135,4 +135,46 @@ import { title } from "process";
      
     console.log(value1,value2)
 
+
+    // problem 6
+
+    interface Product {
+  name: string;
+  price: number;
+}
+
+interface Product {
+  name: string;
+  price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  if (!products || products.length === 0) {
+    return null;
+  }
+
+  const maxValue = products.reduce((maxProduct, currentProduct) =>
+    currentProduct.price > maxProduct.price ? currentProduct : maxProduct
+  );
+
+  console.log(maxValue);
+  return maxValue;
+}
+
+
+const products = [
+  { name: "Pen", price: 10 },
+  { name: "Notebook", price: 25 },
+  { name: "Bag", price: 50 }
+];
+const products1:Product[] =[];
+
+
+getMostExpensiveProduct(products);  
+getMostExpensiveProduct(products1);  
+
+
+// Problem 7
+
+
 }
