@@ -43,7 +43,7 @@ const  cuples : GenericTuple<string,string>=["X" , "Y"]
 
 
 
-// creates a scema for developer
+// creates a schema for developer
 
 interface Developer<T>{
     name: string;

@@ -55,14 +55,28 @@ import { title } from "process";
 
 
     const topRatedBooks=filterByRating(books)
+
+
     console.log(topRatedBooks)
+
+
+    // Problem 3
+
+    function concatenateArrays<T>(...arrays: T[][]): T[]{
+        
+       const individualArray=arrays.reduce((acc, curr) => acc.concat(curr))
+
+    //    by using reduce method arrays were separeted individually and by concat method all arrays are concated as one array
+
+       console.log(individualArray)
+       return  arrays.reduce((acc, curr) => acc);
+    }
+
+    concatenateArrays(["a", "b"], ["c"]);       
+    concatenateArrays([1, 2], [3, 4], [5]);
+
+
+
+
     
- 
-
-
-
-
-
-
-
 }

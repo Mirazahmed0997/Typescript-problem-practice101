@@ -18,10 +18,4 @@
     type checkVehicle <T>= T extends keyof Miraz? true : false;
 
     type hasBike= checkVehicle<"bike">
-
-<<<<<<< HEAD
 }
-// hersf
-=======
-}
->>>>>>> fb0574a870f1b64d88a6d9a5fe990f9bb5ef893a
