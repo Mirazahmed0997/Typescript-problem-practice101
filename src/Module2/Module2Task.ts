@@ -116,4 +116,23 @@ import { title } from "process";
     car1.getInfo()
     car1.getModel()
 
+
+    // problem 5
+
+    const processValue=(value: string | number): number=>{
+        if(typeof value=="string")
+        {
+            return value.length;
+        }
+        else{
+            return value*2
+        }
+    }
+
+    const value1=processValue("hello");
+    const value2=processValue(10);
+
+     
+    console.log(value1,value2)
+
 }
